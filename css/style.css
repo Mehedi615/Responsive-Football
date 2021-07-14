@@ -10,6 +10,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+img {
+  width: 100%;
+}
+
 li {
   list-style: none;
 }
@@ -28,6 +32,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .grid {
@@ -105,27 +111,35 @@ a {
 }
 
 .header-thumbnail img:hover {
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
           transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .player-card {
-  width: 330px;
-  height: 474px;
   background: #ffffff;
   -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-  padding: 15px;
+  padding: 15px 15px 33px 15px;
 }
 
 .player-card img {
   width: 300px;
   height: 256px;
-  margin: 16px 0px;
+  margin: 15px 0px;
+}
+
+.player-card-heading {
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+.player-card-content {
+  color: #6c6c6c;
+  font-size: 16px;
+  line-height: 26px;
+  padding-bottom: 33px;
 }
 
 .players-cards {
@@ -135,5 +149,60 @@ a {
       grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 30px;
   grid-column-gap: 27px;
+}
+
+.highlights {
+  margin: 165px 0;
+}
+
+.highlights-content h1 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+  color: #0a0826;
+  width: 469px;
+  height: 120px;
+}
+
+.highlights-content p {
+  width: 404px;
+  height: 113px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6c6c6c;
+}
+
+.highlights-content a {
+  color: #ffffff;
+}
+
+.highlights-image {
+  width: 567px;
+  height: 427px;
+}
+
+footer {
+  width: 483.87px;
+  height: 213px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer .footer-icons {
+  padding: 20px 0;
+}
+
+footer .fab {
+  background: #e7e7e8;
+  color: #969bab;
+  margin: 0px 14px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
 }
 /*# sourceMappingURL=style.css.map */
